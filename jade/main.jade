@@ -1,10 +1,12 @@
 extends layouts/master
 
 block contents
-	include includes/header-tranlucent.jade
+	include includes/header.jade
+	include includes/slider-main.jade
+	include includes/footer.jade
 
 block scripts
 	script(type="application/javascript", src="../assets/js/imagesloaded.pkgd.min.js")
-	script(type="application/javascript", src="../assets/js/jquery.carouFredSel-6.2.1-packedmain.js")
+	script(type="application/javascript", src="../assets/js/jquery.carouFredSel-6.2.1-packed.js")
 	script(type="application/javascript", src="../assets/js/jquery.touchSwipe.min.js")
 	script(type="application/javascript", src="../assets/js/main.js")
