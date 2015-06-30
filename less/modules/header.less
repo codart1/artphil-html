@@ -33,11 +33,25 @@
             background: none transparent;
           }
 
-          // &:hover {
-          //   span {
-          //     border
-          //   }
-          // }
+          span {
+            position: relative;
+
+            &:after {
+              opacity: 0;
+              content: "";
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              width: 100%;
+              border-bottom: 2px solid #fff;
+            }
+          }
+
+          &:hover {
+            span:after {
+              opacity: 1;
+            }
+          }
         }
       }
     }
