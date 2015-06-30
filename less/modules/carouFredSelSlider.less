@@ -1,9 +1,15 @@
+@import url("../var.less");
+@import url("../mixins.less");
+
+
+/* --------------------------------------------------------------------- */
+/* .caroufredsel-slider
+/* --------------------------------------------------------------------- */
 .caroufredsel-slider {
   position: relative;
 
   &:hover {
-    .slider-indicators,
-    .slider-control {
+    .slider-indicators, .slider-control {
       @media screen and (min-width: 992px) {
         opacity: 1;
         visibility: visible;
@@ -230,7 +236,7 @@
       left: 0;
       right: auto;
     }
-
+    
     &.next-btn {
       right: 0;
       left: auto;
