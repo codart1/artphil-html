@@ -15,14 +15,38 @@ body {
   position: absolute !important;
 }
 
-.deepskyblue {
-  background: @deepskyblue !important;
+.deepskyblue-color {
+  background: @deepskyblue-color !important;
 }
 
-.lime {
-  background: @lime !important;
+.lime-color {
+  background: @lime-color !important;
 }
 
-.hotpink {
-  background: @hotpink !important;
+.hotpink-color {
+  background: @hotpink-color !important;
 }
+
+.gold-color {
+  background: @gold-color !important;
+}
+
+.darkviolet-color {
+  background: @darkviolet-color !important;
+}
+
+.gray-color {
+  background: @gray-color !important;
+}
+
+input, select, textarea, button, .btn {
+  &,
+  &:focus, &.focus, 
+  &:active, &.active, 
+  &:active:focus,
+  &.active.focus,
+  &.active:focus, &:active.focus {
+    outline: 0;
+  }
+}
+
