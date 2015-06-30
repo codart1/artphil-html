@@ -19,16 +19,17 @@
     float: left;
 
     ul {
-      li {
+      > li {
         float: left;
 
-        a {
+        > a {
           font-size: 15px;
           color: #fff;
           font-weight: bold;
           padding: 24px 20px;
 
-          &:hover {
+          &:hover,
+          &:focus {
             background: none transparent;
           }
         }
