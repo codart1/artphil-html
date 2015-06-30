@@ -1,6 +1,9 @@
 extends layouts/master
 
 block contents
+	include includes/mixin.header.jade
+
+	+header(class="tranlucent absolute")
 	include includes/header-sub.jade
 
 block scripts
