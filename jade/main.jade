@@ -1,9 +1,11 @@
 extends layouts/master
 
 block contents
-	include includes/header.jade
+	include includes/mixin.header.jade
+	+header(class="tranlucent absolute")
 	include includes/slider-main.jade
-	include includes/footer.jade
+	include includes/mixin.footer.jade
+	+footer(class="tranlucent absolute")
 
 block scripts
 	script(type="application/javascript", src="../assets/js/imagesloaded.pkgd.min.js")

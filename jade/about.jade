@@ -1,12 +1,8 @@
 extends layouts/master
 
 block contents
-<<<<<<< HEAD
-	include includes/header.jade
-=======
 	include includes/mixin.header.jade
-
-	+header(class="tranlucent absolute")
->>>>>>> f2171eea75f0335ea35d3a5e00d38c9196a279f7
+	+header(class="deepskyblue-color")
 	include includes/header-sub.jade
-	include includes/footer.jade
+	include includes/mixin.footer.jade
+	+footer(class="deepskyblue-color")
