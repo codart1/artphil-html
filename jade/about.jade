@@ -3,10 +3,14 @@ extends layouts/master
 block contents
 	include includes/mixin.header.jade
 	+header(class="deepskyblue-color")
-	include includes/header-sub.jade
+	
+	include includes/mixin.header-sub.jade
+	+snb('About', 'Faculty', 'Why ArtPhil')
+
 	include includes/vimeo1.jade
 	include includes/about.jade
 	include includes/faculty.jade
 	include includes/why-artphil.jade
+
 	include includes/mixin.footer.jade
 	+footer(class="deepskyblue-color")
