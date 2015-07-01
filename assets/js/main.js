@@ -48,5 +48,30 @@
       }
     })();
 
+
+
+    /* --------------------------------------------------------------------- */
+    /* .slider-main
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('.why-artphil').length) {
+        $(document).ready(function() {
+
+          $('.why-artphil').each(function() {
+            var highestBox = 0;
+            
+            $(this).find('.col-item').each(function() {
+              if ($(this).height() > highestBox) {
+                highestBox = $(this).height();
+              }
+            })
+
+            $(this).find('.col-item').height(highestBox);
+          });
+        });
+      }
+    })();
+
+
   });
 }(jQuery);
