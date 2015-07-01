@@ -13,7 +13,21 @@
   }
 
 	.col-item {
+		background-color: #fff !important;
 		margin-bottom: 100px;
+
+		&:hover {
+			.content-thumb img {
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			.content-hover {
+				opacity: 1;
+				visibility: visible;
+				background-color: #D5D5D5;
+			}
+		}
 
 		@media screen and (max-width: 767px) {
 			height: auto !important;
@@ -43,19 +57,79 @@
 	.content-thumb {
 		position: relative;
 		text-align: center;
+		border-radius: 50%;
+		overflow: hidden;
 		margin-bottom: 40px;
 
 		img {
 			width: 100%;
+			transition: all 0.4s ease;
 		}
 
 		.content-hover {
+			opacity: 0;
+			visibility: hidden;
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+			border-radius: 50%;
+			overflow: hidden;
+			transition: all 0.4s ease;
+
+			span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				font-family: 'NanumGothic';
+				font-size: 42px;
+				font-weight: bold;
+				color: #000;
+			}
 		}
+	}
+
+	.lime1-color .content-hover {
+		background-color: #1fff5a !important; 
+	}
+
+	.magenta-color .content-hover {
+		background-color: #ff1fe6 !important; 
+	}
+
+	.aqua-color .content-hover {
+		background-color: #23faff !important; 
+	}
+
+	.yellow-color .content-hover {
+		background-color: #ffec27 !important; 
+	}
+
+	.darkorange-color .content-hover {
+		background-color: #ff6907 !important; 
+	}
+
+	.blueviolet-color .content-hover {
+		background-color: #9f41ff !important; 
+	}
+
+	.deepskyblue-color .content-hover {
+		background-color: #1aa2ff !important; 
+	}
+
+	.red-color .content-hover {
+		background-color: #ff0f14 !important; 
+	}
+
+	.lime2-color .content-hover {
+		background-color: #37cf00 !important; 
+	}
+
+	.lightpink-color .content-hover {
+		background-color: #ff7d79 !important; 
 	}
 
 	.content-desc {
@@ -63,7 +137,7 @@
 
 		&,
 		span,
-		a {
+		a { 
 			font-family: "NanumGothic";
 		}
 
