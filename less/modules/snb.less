@@ -2,6 +2,15 @@
 /* .snb
 /* --------------------------------------------------------------------- */
 .snb {
+	@height: 40px;
+
+	height: @height;
+	line-height: @height;
+
+	ul {
+		padding: 0;
+	}
+
 	&-item {
 		display: inline-block;
 	}
