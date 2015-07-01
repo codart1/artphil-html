@@ -3,8 +3,9 @@ extends layouts/master
 block contents
 	include includes/mixin.header.jade
 	+header(class="lightlime-color")
-	
-	include includes/header-sub.jade
+
+	include includes/mixin.header-sub.jade
+	+snb('Regular Course', 'Intensive Course', 'Figure Drawing', 'Collaborative Project', 'Annual Schedule')
 
 	include includes/mixin.footer.jade
 	+footer(class="lightlime-color")
