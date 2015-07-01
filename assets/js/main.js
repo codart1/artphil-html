@@ -51,27 +51,33 @@
 
 
     /* --------------------------------------------------------------------- */
-    /* .slider-main
+    /* .equaHeight function
     /* --------------------------------------------------------------------- */
     (function() {
-      if ($('.why-artphil').length) {
-        $(document).ready(function() {
+      var equaHeight = function(container, box){
+        if (container.length) {
+          $(window).load(function() {
 
-          $('.why-artphil').each(function() {
-            var highestBox = 0;
-            
-            $(this).find('.col-item').each(function() {
-              if ($(this).height() > highestBox) {
-                highestBox = $(this).height();
-              }
-            })
+            container.each(function() {
+              var highestBox = 0;
+              
+              $(this).find(box).each(function() {
+                if ($(this).height() > highestBox) {
+                  highestBox = $(this).height();
+                }
+              })
 
-            $(this).find('.col-item').height(highestBox);
+              $(this).find(box).height(highestBox);
+            });
           });
-        });
-      }
-    })();
+        }
+      };
 
+      $(document).ready(function(){
+        equaHeight($(".faculty"), $(".col-item"));
+        equaHeight($(".why-artphil"), $(".col-item"));
+      });
+    })();
 
   });
 }(jQuery);
