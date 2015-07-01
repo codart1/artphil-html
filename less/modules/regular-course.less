@@ -2,6 +2,7 @@
 /* .regular-course
 /* --------------------------------------------------------------------- */
 .regular-course {
+  margin-top: 46px;
 	margin-bottom: 60px;
 
 	.col-item {
@@ -15,41 +16,25 @@
 		margin-bottom: 56px;
 	}
 
-	.regular-course-table {
-		table {
-			width: 100%;
+	.table-wrap {
+		margin-bottom: 35px;
+	}
 
-			&,
-			th,
-			td {
-				border: 1px solid #555555;
-			}
+	.content {
+		&,
+		p {
+			font-family: 'NanumGothic';
+			color: #959595;
+		}
+	}
 
-			caption {
-				font-family: 'NanumGothic';
-				font-size: 21px;
-				font-weight: bold;
-				font-style: italic;
-				color: #000;
-				padding-top: 0;
-				pointer-events: 20px;
-			}
+	.red-color {
+		color: #ff0000 !important;
+	}
 
-			.highlight {
-  			font-family: 'Georgia-Italic';
-  			font-size: 21px;
-				background-color: #90e04c;
-				border-color: #90e04c;
-				color: #fff;
-				font-style: italic;
-				text-align: center;
-			}
-
-			.border-bottom-none {
-				td {
-					border-bottom: 0 none;
-				}
-			}
+	.course-detail {
+		> .row {
+			margin-bottom: 18px;
 		}
 	}
 }
