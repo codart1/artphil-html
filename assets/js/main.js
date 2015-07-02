@@ -1,10 +1,10 @@
 ! function($) {
   $(document).ready(function() {
     /* --------------------------------------------------------------------- */
-    /* .slider-main
+    /* #caroufredsel-slider-main
     /* --------------------------------------------------------------------- */
     (function() {
-      if ($('.slider-main').length) {
+      if ($('#caroufredsel-slider-main').length) {
         function runSliderMain() {
           $('#caroufredsel-slider-main .sliders').carouFredSel({
             infinite: true,
@@ -79,7 +79,6 @@
       });
     })();
 
-  });
 
 
   /* --------------------------------------------------------------------- */
@@ -87,7 +86,6 @@
   /* --------------------------------------------------------------------- */
   $(function() {
     var offset = 80;
-
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
@@ -103,23 +101,73 @@
   });
 
 
-  /* --------------------------------------------------------------------- */
-  /* .fixed snb
-  /* --------------------------------------------------------------------- */
-  $(function() {
-    if (!$('#snb').length) return;
+    /* --------------------------------------------------------------------- */
+    /* .fixed snb
+    /* --------------------------------------------------------------------- */
+    $(function() {
+      var gnb = $('#gnb');
+      var snb = $('#snb');
 
-    var gnb = $('#gnb');
-    var snb = $('#snb');
-
-    $(window).scroll(function() {
-      if (gnb.visible(true)) {
-        snb.removeClass('fixed');
-      } else {
-        snb.addClass('fixed');
-      }
+      $(window).scroll(function() {
+        if (gnb.visible(true)) {
+          snb.removeClass('fixed');
+        } else {
+          snb.addClass('fixed');
+        }
+      });
     });
 
-  });
 
+
+    /* --------------------------------------------------------------------- */
+    /* #caroufredsel-slider-special-courses
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('#caroufredsel-slider-special-courses').length) {
+        function runSliderMain() {
+          $('#caroufredsel-slider-special-courses .sliders').carouFredSel({
+            infinite: true,
+            circular: true,
+            responsive: true,
+            debug: false,
+            items: {
+              start: 0
+            },
+
+            scroll: {
+              items: 1,
+              duration: 600,
+              fx: "scroll"
+            },
+
+            auto: {
+              timeoutDuration: 6000,
+              play: true
+            },
+
+            prev: {
+              button: "#caroufredsel-slider-special-courses-prev"
+            },
+
+            next: {
+              button: "#caroufredsel-slider-special-courses-next"
+            },
+
+            pagination: {
+              container: "#caroufredsel-slider-special-courses-pagination"
+            },
+
+            swipe: {
+              onTouch: true,
+              onMouse: true
+            }
+          });
+        }
+        $("#caroufredsel-slider-special-courses").imagesLoaded(runSliderMain);
+      }
+    })();
+
+
+
+  });
 }(jQuery);

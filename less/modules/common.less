@@ -3,7 +3,7 @@
 /* --------------------------------------------------------------------- */
 .container {
   @media screen and (min-width: 1200px) {
-    width: 1000px + 15*2;
+    width: 1000px + 20*2;
   }
 }
 
@@ -147,6 +147,9 @@ input, select, textarea, button, .btn {
 
       &:nth-child(2) {
         text-align: center;
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
 
@@ -163,8 +166,8 @@ input, select, textarea, button, .btn {
     .highlight {
       font-family: 'Georgia-Italic';
       font-size: 21px;
-      background-color: #90e04c;
-      border-color: #90e04c;
+      background-color: @lightlime-color;
+      border-color: @lightlime-color;
       color: #fff;
       font-style: italic;
       text-align: center;
@@ -175,5 +178,35 @@ input, select, textarea, button, .btn {
         border-bottom: 0 none;
       }
     }
+  }
+}
+
+.program-detail {
+  > .row {
+    margin-bottom: 18px;
+  }
+
+  p {
+    margin: 0 0 25px 0;
+  }
+
+  .content {
+    &,
+    p {
+      font-family: 'NanumGothic';
+      color: #959595;
+    }
+  }
+
+  .red-color {
+    color: #ff0000 !important;
+  }
+}
+
+.program-slider {
+  margin-bottom: 30px;
+
+  .slider-indicators {
+    display: none !important;
   }
 }
