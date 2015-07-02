@@ -1,0 +1,11 @@
+extends layouts/master
+
+block contents
+	include includes/mixin.header.jade
+	+header(class="tranlucent absolute")
+	
+	include includes/map.jade
+	include includes/contact-info.jade
+	
+	include includes/mixin.footer.jade
+	+footer(class="tranlucent")

@@ -1,0 +1,16 @@
+mixin contact-block(data)
+  //- div= data.icon
+  //- each chunk in data.chunks
+  //-   div= chunk.title
+  //-   div= chunk.des
+  .contact-block
+    .row
+      .col-xs-2
+        img(src="#{data.icon}", alt="")
+      .col-xs-10.contact-block-chunk-wrapper
+        .row
+          .col-xs-12
+            .contact-block-chunk
+              .contact-block-chunk-title!=data.chunks[0].title    
+              .contact-block-chunk-des!=data.chunks[0].des    
+
