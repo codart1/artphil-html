@@ -123,7 +123,7 @@
     /* --------------------------------------------------------------------- */
     (function() {
       if ($('#caroufredsel-slider-special-courses').length) {
-        function runSliderMain() {
+        function runSliderSpecialCourses() {
           $('#caroufredsel-slider-special-courses .sliders').carouFredSel({
             infinite: true,
             circular: true,
@@ -162,7 +162,107 @@
             }
           });
         }
-        $("#caroufredsel-slider-special-courses").imagesLoaded(runSliderMain);
+        $("#caroufredsel-slider-special-courses").imagesLoaded(runSliderSpecialCourses);
+      }
+    })();
+
+
+
+    /* --------------------------------------------------------------------- */
+    /* #caroufredsel-slider-collaborative-project
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('#caroufredsel-slider-collaborative-project').length) {
+        function runSliderCollaborativeProject() {
+          $('#caroufredsel-slider-collaborative-project .sliders').carouFredSel({
+            infinite: true,
+            circular: true,
+            responsive: true,
+            debug: false,
+            items: {
+              start: 0
+            },
+
+            scroll: {
+              items: 1,
+              duration: 600,
+              fx: "scroll"
+            },
+
+            auto: {
+              timeoutDuration: 6000,
+              play: true
+            },
+
+            prev: {
+              button: "#caroufredsel-slider-collaborative-project-prev"
+            },
+
+            next: {
+              button: "#caroufredsel-slider-collaborative-project-next"
+            },
+
+            pagination: {
+              container: "#caroufredsel-slider-collaborative-project-pagination"
+            },
+
+            swipe: {
+              onTouch: true,
+              onMouse: true
+            }
+          });
+        }
+        $("#caroufredsel-slider-collaborative-project").imagesLoaded(runSliderCollaborativeProject);
+      }
+    })();
+
+
+
+    /* --------------------------------------------------------------------- */
+    /* #caroufredsel-slider-figure-drawing-class
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('#caroufredsel-slider-figure-drawing-class').length) {
+        function runSliderFigureDrawingClass() {
+          $('#caroufredsel-slider-figure-drawing-class .sliders').carouFredSel({
+            infinite: true,
+            circular: true,
+            responsive: true,
+            debug: false,
+            items: {
+              start: 0
+            },
+
+            scroll: {
+              items: 1,
+              duration: 600,
+              fx: "scroll"
+            },
+
+            auto: {
+              timeoutDuration: 6000,
+              play: true
+            },
+
+            prev: {
+              button: "#caroufredsel-slider-figure-drawing-class-prev"
+            },
+
+            next: {
+              button: "#caroufredsel-slider-figure-drawing-class-next"
+            },
+
+            pagination: {
+              container: "#caroufredsel-slider-figure-drawing-class-pagination"
+            },
+
+            swipe: {
+              onTouch: true,
+              onMouse: true
+            }
+          });
+        }
+        $("#caroufredsel-slider-figure-drawing-class").imagesLoaded(runSliderFigureDrawingClass);
       }
     })();
 
