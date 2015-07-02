@@ -1,0 +1,33 @@
+/* --------------------------------------------------------------------- */
+/* .news
+/* --------------------------------------------------------------------- */
+.news {
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.news .artphil-h1 {
+  margin-bottom: 40px;
+}
+.news .content-header {
+  position: relative;
+  padding-top: 38px;
+  margin-bottom: 35px;
+}
+.news .content-title {
+  font-family: 'NanumGothic';
+  font-size: 21px;
+  color: #636363;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.news .content-meta span {
+  font-family: corbel;
+  font-size: 14px;
+  color: #636363;
+}
+.news .content-thumb > img {
+  margin-bottom: 15px;
+}
+.news .content-thumb > img:last-child {
+  margin-bottom: 0;
+}

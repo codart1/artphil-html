@@ -1,0 +1,93 @@
+/* --------------------------------------------------------------------- */
+/* .news
+/* --------------------------------------------------------------------- */
+.news {
+  margin-top: 70px;
+	margin-bottom: 70px;
+
+	.artphil-h1 {
+		margin-bottom: 40px;
+	}
+
+	article {
+		position: relative;
+		padding-top: 38px;
+		margin-bottom: 40px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 33px;
+			height: 1px;
+			background: #c5c4ca;
+		}
+	}
+
+	.content-header {
+		margin-bottom: 35px;
+	}
+
+	.content-title {
+		font-family: 'NanumGothic';
+		font-size: 21px;
+		color: #636363;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	.content-meta {
+		span {
+			font-family: corbel;
+			font-size: 14px;
+			color: #636363;
+		}
+	}
+
+	.content-thumb {
+		margin-bottom: 25px;
+
+		> img {
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.content {
+	  margin-bottom: 53px;
+
+		&,
+		p {
+			color: #959595;
+		}
+
+		p {
+			margin: 0 0 21px 0;
+		}
+	}
+
+	.content-share {
+		text-align: center;
+
+		ul {
+			display: inline-block;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				float: left;
+				margin-right: 27px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
