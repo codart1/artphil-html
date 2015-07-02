@@ -8,6 +8,15 @@ block contents
 	+snb('Regular Course', 'Intensive Course', 'Figure Drawing', 'Collaborative Project', 'Annual Schedule')
 
 	include includes/regular-course.jade
+
+	include includes/intensive-course.jade
+
+	include includes/special-courses.jade
 	
 	include includes/mixin.footer.jade
 	+footer(class="lightlime-color")
+
+block scripts
+	script(type="application/javascript", src="../assets/js/imagesloaded.pkgd.min.js")
+	script(type="application/javascript", src="../assets/js/jquery.carouFredSel-6.2.1-packed.js")
+	script(type="application/javascript", src="../assets/js/jquery.touchSwipe.min.js")
