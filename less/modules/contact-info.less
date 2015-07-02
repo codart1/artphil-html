@@ -1,0 +1,44 @@
+/* --------------------------------------------------------------------- */
+/* .contact info
+/* --------------------------------------------------------------------- */
+.contact-info {
+	margin-top: 35px; 
+	margin-bottom: 60px;
+
+	&-h1 {
+		font-family: 'NanumBarunGothic';
+		font-weight: bold;
+		margin-bottom: 30px;
+	}
+}
+
+.contact-block {
+	&-chunk {
+		&-wrapper {
+			@media screen and (min-width: @md-width) {
+				padding-left: 0;
+			}
+		}
+
+		&-title {
+			font-family: 'Georgia-Italic';
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+		&-des {
+			font-family: 'NanumGothic';
+			color: @gray3-color;
+			font-size: 14px;
+		}
+	}
+
+	span.ko-barun {
+		font-family: 'NanumBarunGothic';
+		font-weight: normal;
+	}
+}
+
+.contact-block + .contact-block {
+	margin-top: 20px;
+}

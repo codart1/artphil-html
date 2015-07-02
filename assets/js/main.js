@@ -86,13 +86,15 @@
   /* .anchor smooth scroll
   /* --------------------------------------------------------------------- */
   $(function() {
+    var offset = 80;
+
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html,body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - offset
           }, 1000);
           return false;
         }
@@ -105,6 +107,8 @@
   /* .fixed snb
   /* --------------------------------------------------------------------- */
   $(function() {
+    if (!$('#snb').length) return;
+
     var gnb = $('#gnb');
     var snb = $('#snb');
 
