@@ -1,0 +1,104 @@
+/* --------------------------------------------------------------------- */
+/* .school
+/* --------------------------------------------------------------------- */
+.school {
+	padding-top: 42px;
+	margin-bottom: 50px;
+	
+	.artphil-h1 {
+		margin-right: 40px;
+		margin-bottom: 30px;
+	}
+
+	.select-wrap {
+		float: left;
+		font-size: 40px;
+
+		.label-select {
+			float: left;
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			select {
+				height: 33px;
+				font-family: 'NanumGothic';
+				font-size: 18px;
+				color: #000;
+				font-weight: bold;
+				border: 1px solid #000;
+				padding: 0 7px;
+			}
+		}
+	}
+
+	.embed-container {
+		margin-bottom: 54px;
+	}
+
+	.content-list {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li.school-item {
+				border-bottom: 1px solid #c2c2c2;
+				padding: 20px 0;
+
+				&:first-child {
+					border-top: 1px solid #c2c2c2;
+				}
+
+				> .col-left {
+					float: left;
+					width: 18.5%;
+				}
+
+				> .col-right {
+					float: left;
+					width: 81.5%;
+				}
+			}
+		}
+
+		.content-thumb {
+			text-align: center;
+		}
+
+		.content-title {
+			font-family: 'NanumGothic';
+			font-size: 22px;
+			font-weight: bold;
+			color: #000;
+			margin: 0 0 20px 0;
+
+			span {
+				font-family: 'NanumGothic';
+				font-size: 10px;
+				padding: 0 5px;
+			}
+		}
+
+		.content,
+		.content-footer {
+			&,
+			p,
+			a {
+				font-family: 'NanumGothic';
+				font-size: 12px;
+				color: #636363;
+			}
+
+			a {
+				text-decoration: underline;
+
+				&:hover {
+					color: @hotpink-color;
+				}
+			}
+		}
+	}
+}
