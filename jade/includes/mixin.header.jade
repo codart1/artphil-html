@@ -5,8 +5,11 @@ mixin header
         a(href='main.html')
           img(src='../assets/images/logo/logo-white.png', alt='logo-white')
       // .logo
-      nav#nav-main.nav-main(role='navigation')
-        ul.nav
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#nav-main')
+        img(src='../assets/images/icon/icon-bars.png', alt='icon-bars')
+      // button collapse
+      nav#nav-main.nav-main.navbar-collapse.collapse(role='navigation')
+        ul.nav.navbar-nav
           li.nav-item.menu-item
             a.nav-link(href='about.html')
               span about
@@ -29,7 +32,7 @@ mixin header
             a.nav-link(href='#')
               span 상담신청
       // #nav
-      .social
+      .social.hidden-xs.hidden-sm
         ul
           li
             a(href='#')

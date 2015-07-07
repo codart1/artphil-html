@@ -10,24 +10,85 @@
     background: rgba(34, 34, 34, 0.8);
   }
 
+  > .container {
+    @media screen and (min-width: 992px) {
+      position: relative;
+    }
+  }
+
   .logo {
     float: left;
     margin: 21px 40px 0 0;
+
+    @media screen and (max-width: 1199px) {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 991px) {
+      float: none;
+      text-align: center;
+      margin: 21px auto;
+    }
+  }
+
+  .navbar-toggle {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    padding: 0;
+    margin: 0;
   }
 
   .nav-main {
     float: left;
 
+    &.navbar-collapse {
+      @media screen and (max-width: 991px) {
+        position: absolute;
+        top: 71px;
+        left: 20px;
+        width: 100%;
+        background: rgba(34, 34, 34, 0.8);
+        border: 0 none;
+        padding: 0;
+      }
+    }
+
     .nav {
+      @media screen and (max-width: 991px) {
+        padding: 15px 0;
+        margin: 0;
+      }
+
       > li {
         float: left;
+
+        @media screen and (max-width: 991px) {
+          float: none;
+        }
+
+        &.active {
+          > a {
+            span:after {
+              opacity: 1;
+            }
+          }
+        }
 
         > a {
           font-family: 'NanumGothic';
           font-size: 14px;
           color: #fff;
           font-weight: bold;
-          padding: 24px 20px;
+          padding: 25px 20px;
+
+          @media screen and (max-width: 991px) {
+            display: block;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
 
           &:hover,
           &:focus {
@@ -60,7 +121,7 @@
 
   .social {
     float: right;
-    margin: 16px 0;
+    margin: 20px 0;
 
     ul {
       list-style: none;
@@ -69,6 +130,12 @@
 
       li {
         float: left;
+        width: 30px;
+        height: 30px;
+
+        img {
+          width: 100%;
+        }
 
         & + li {
           margin-left: 14px;
