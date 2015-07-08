@@ -3,8 +3,12 @@
 /* --------------------------------------------------------------------- */
 .footer {
   width: 100%;
-  background: #a2a2a2;
-  padding: 25px 0 69px;
+  background: #333;
+  padding: 36px 0;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 16px;
+  }
 
   &.tranlucent {
     background: rgba(0, 0, 0, 0.8);
@@ -14,11 +18,17 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 9000;
+  }
+
+  &.static {
+    position: static;
   }
 
   &, a, span, i {
     font-family: 'NanumGothic';
     font-size: 11px;
+    line-height: 1.7;
     color: #fff;
   }
 
@@ -26,16 +36,54 @@
     text-decoration: underline;
   }
 
+  .title-footer {
+    font-family: 'NanumGothic';
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: #898989;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+  }
+
   .col {
+    position: relative;
     float: left;
-    border-right: 1px solid #fff;
     padding-right: 35px;
     margin-right: 35px;
 
-    &:last-child {
-      border-right: 0 none;
+    @media screen and (max-width: 1199px) {
+      float: none;
       padding-right: 0;
       margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 25px;
+      background: #fff;
+
+      @media screen and (max-width: 1199px) {
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      
+      &:after {
+        width: 0;
+        height: 0;
+        display: none;
+      }
     }
 
     p {
@@ -56,6 +104,26 @@
     
     .divider {
       margin: 0 8px;
+    }
+
+    &.language {
+      a {
+        @media screen and (max-width: 991px) {
+          text-transform: uppercase;
+        }
+      }
+
+      &:after {
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+  }
+
+  .social {
+    @media screen and (min-width: 992px) {
+      display: none;
     }
   }
 }

@@ -45,6 +45,26 @@
           });
         }
         $("#caroufredsel-slider-main").imagesLoaded(runSliderMain);
+
+        var sliderMain = $("#caroufredsel-slider-main");
+        var slideItem = sliderMain.find(".sliders .slide-item");
+        var slideImage = slideItem.find(".slide-image");
+        var urlSlideImage = slideImage.attr('src');
+        slideItem.css("background-image", "url('" + urlSlideImage + "')");
+      }
+    })();
+
+
+
+    /* --------------------------------------------------------------------- */
+    /* Clone social on Header to Footer
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('.social').length) {
+        var socialHeader = $(".header .social");
+        var containerFooter = $(".footer > .container");
+        var socialHeaderClone = socialHeader.clone();
+        containerFooter.append(socialHeaderClone.addClass('col'));
       }
     })();
 
@@ -56,19 +76,16 @@
     (function() {
       var equaHeight = function(container, box){
         if (container.length) {
-          $(window).load(function() {
+          container.each(function() {
+            var highestBox = 0;
+            
+            $(this).find(box).each(function() {
+              if ($(this).height() > highestBox) {
+                highestBox = $(this).height();
+              }
+            })
 
-            container.each(function() {
-              var highestBox = 0;
-              
-              $(this).find(box).each(function() {
-                if ($(this).height() > highestBox) {
-                  highestBox = $(this).height();
-                }
-              })
-
-              $(this).find(box).height(highestBox);
-            });
+            $(this).find(box).height(highestBox);
           });
         }
       };
@@ -81,24 +98,72 @@
 
 
 
-  /* --------------------------------------------------------------------- */
-  /* .anchor smooth scroll
-  /* --------------------------------------------------------------------- */
-  $(function() {
-    var offset = 80;
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top - offset
+    /* --------------------------------------------------------------------- */
+    /* Click to scroll - Sub Navigation Bottom
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('.snb').length) {
+        // Cache selectors
+        var lastId,
+          snb = $(".snb"),
+          snbHeight = snb.outerHeight() + 15,
+          // All list items
+          menuItemsLi = snb.find("#nav-sub ul li"),
+          menuItems = snb.find("#nav-sub ul li a"),
+          // Anchors corresponding to menu items
+          scrollItems = menuItems.map(function() {
+            var item = $($(this).attr("href"));
+            if (item.length) {
+              return item;
+            }
+          });
+
+        // Bind click handler to menu items
+        // so we can get a fancy scroll animation
+        menuItems.click(function(e) {
+          var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top - snbHeight + 1;
+          $('html, body').stop().animate({
+            scrollTop: offsetTop
           }, 1000);
-          return false;
-        }
+          snb.find(".navbar-collapse").collapse('hide');
+          e.preventDefault();
+        });
+
+        // Bind to scroll
+        $(window).scroll(function() {
+          // Get container scroll position
+          var fromTop = $(this).scrollTop() + snbHeight;
+
+          // Get id of current scroll item
+          var cur = scrollItems.map(function() {
+            if ($(this).offset().top < fromTop)
+              return this;
+          });
+          // Get the id of the current element
+          cur = cur[cur.length - 1];
+          var id = cur && cur.length ? cur[0].id : "";
+
+          if (lastId !== id) {
+            lastId = id;
+
+            // Set/remove active class
+            menuItems
+              .parent().removeClass("active")
+              .end().filter("[href=#" + id + "]").parent().addClass("active");
+          }
+
+          var menuItemsActive = snb.find("#nav-sub ul li.active a");
+          var navbarToggle = snb.find(".navbar-toggle span");
+          navbarToggle.html(menuItemsActive.text());
+
+          if(!menuItems.parent().hasClass("active")){
+            var menuItemsFirstText = menuItems.parent().first().find("a").text();
+            navbarToggle.html(menuItemsFirstText);
+          }
+        });
       }
-    });
-  });
+    })();
 
 
     /* --------------------------------------------------------------------- */
@@ -268,6 +333,19 @@
     })();
 
 
+
+    /* --------------------------------------------------------------------- */
+    /* .faculty
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('.faculty').length) {
+        var colItem = $(".faculty .faculty-content").find(".col-item");
+
+        colItem.on("click", function(){
+          $(this).toggleClass("active");
+        });
+      }
+    })();
 
   });
 }(jQuery);

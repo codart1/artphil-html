@@ -2,10 +2,31 @@
 /* .faculty
 /* --------------------------------------------------------------------- */
 .faculty {
+	margin-bottom: 37px;
+	
+	.faculty-content {
+		.row {
+			margin-left: -16px;
+			margin-right: -16px;
+
+			[class^="col-"] {
+				padding-right: 16px;
+				padding-left: 16px;
+			}
+		}
+	}
+
 	.col-item {
 		background-color: #fff !important;
-		margin-bottom: 100px;
+		margin-bottom: 32px;
 
+		@media screen and (max-width: 479px) {
+			width: 100%;
+			height: auto !important;
+			margin-bottom: 40px;
+		}
+
+		&.active,
 		&:hover {
 			.content-thumb img {
 				opacity: 0;
@@ -18,30 +39,10 @@
 				background-color: #D5D5D5;
 			}
 		}
-
-		@media screen and (max-width: 767px) {
-			height: auto !important;
-			margin-bottom: 40px;
-		}
-
-		article {
-			@media screen and (max-width: 767px) {
-				padding-bottom: 20px;
-				border-bottom: 1px solid #c5c4ca;
-			}	
-		}
-
-		&:last-child {
-			article {
-				@media screen and (max-width: 767px) {
-					border-bottom: 0 none;
-				}
-			}
-		}
 	}
 
 	.artphil-h1 {
-		margin-bottom: 80px;
+		margin-bottom: 57px;
 	}
 
 	.content-thumb {
@@ -49,7 +50,6 @@
 		text-align: center;
 		border-radius: 50%;
 		overflow: hidden;
-		margin-bottom: 40px;
 
 		img {
 			width: 100%;
@@ -68,16 +68,12 @@
 			overflow: hidden;
 			transition: all 0.4s ease;
 
-			span {
+			.content-hover-inner {
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				width: 100%;
 				transform: translate(-50%, -50%);
-				font-family: 'NanumGothic';
-				font-size: 42px;
-				font-weight: bold;
-				color: #000;
 			}
 		}
 	}
@@ -122,6 +118,14 @@
 		background-color: #ff7d79 !important; 
 	}
 
+	.content-title {
+		font-family: 'NanumGothic';
+		font-size: 26px;
+		font-weight: bold;
+		color: #000;
+	  margin: 0 auto 30px;
+	}
+
 	.content-desc {
 		text-align: center;
 
@@ -133,21 +137,21 @@
 
 		.ko-name {
 			display: block;
-			font-size: 24px;
+			font-size: 14px;
 			font-weight: bold;
 			color: #000;
 		}
 
 		.en-name {
 			display: block;
-			font-size: 24px;
+			font-size: 14px;
 			font-weight: normal;
 			color: #000;
 		}
 
 		.info-detail {
 			display: block;
-			font-size: 24px;
+			font-size: 14px;
 			font-weight: normal;
 			color: #000;
 		}

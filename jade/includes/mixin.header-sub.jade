@@ -1,6 +1,9 @@
 mixin snb(...items)
   .snb#snb
     .container
-      ul
-        each item in items
-          li.snb-item #[a(href="#" + item.toLowerCase().replace(" ", "-"))= item ]
+      a.navbar-toggle.collapsed(data-toggle='collapse', data-target='#nav-sub')
+        span About
+      #nav-sub.navbar-collapse.collapse(role='navigation')
+        ul
+          each item in items
+            li.snb-item #[a(href="#" + item.toLowerCase().replace(" ", "-"))= item ]

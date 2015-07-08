@@ -4,21 +4,63 @@
 .snb {
 	@height: 40px;
 
-	height: @height;
-	line-height: @height;
+	@media screen and (min-width: 992px) {
+		height: @height;
+		line-height: @height;
+	}
 
-	ul {
+	> .container {
+		@media screen and (max-width: 991px) {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	#nav-sub {
 		padding: 0;
-	}
+		margin: 0;
 
-	&-item {
-		display: inline-block;
-		font-family: 'NanumGothic';
-		a { color: black; }
-	}
+		&.collapsing, 
+		&.in {
+		  border-bottom: 1px solid #ccc;
 
-	&-item + &-item {
-		margin-left: 48px;
+		  @media screen and (min-width: 992px) {
+		  	border-bottom: 0 none;
+		  }
+		}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			@media screen and (max-width: 991px) {
+				text-align: center;
+				padding: 10px 0;
+			}
+			
+			.snb-item {
+				display: inline-block;
+				font-family: 'NanumGothic';
+
+				&.active {
+					a {
+						border-bottom: 2px solid #636363;
+					}
+				}
+
+				a { 
+					color: #636363;
+					font-weight: bold;
+					text-decoration: none;
+				}
+			}
+
+			.snb-item + .snb-item {
+				margin-left: 48px;
+			}
+		}
 	}
 
 	&.fixed {
@@ -27,5 +69,38 @@
 		background: white;
 		top: 0; left: 0;
 		width: 100%;
+	  border-bottom: 1px solid #ccc;
+
+	  @media screen and (max-width: 991px) {
+	  	border-bottom: 0 none;
+	  }
+	}
+
+	.navbar-toggle {
+		float: none;
+		cursor: pointer;
+		text-align: center;
+		color: #000;
+		border: 0 none;
+		border-bottom: 1px solid #ccc;
+	  border-radius: 0;
+		margin: 0;
+
+		@media screen and (max-width: 991px) {
+			display: block;
+		}
+
+		&.collapsed {
+			span {
+				background: url("../images/icon/angle-down.png") center right no-repeat;
+			}
+		}
+
+		span {
+			display: inline-block;
+			background: url("../images/icon/angle-up.png") center right no-repeat;
+			padding-right: 20px;
+			line-height: 1;
+		}
 	}
 }

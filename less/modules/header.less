@@ -2,18 +2,13 @@
 /* .header-tranlucent
 /* --------------------------------------------------------------------- */
 .header {
+  position: relative;
   width: 100%;
   background: #a2a2a2;
   z-index: 9000;
 
   &.tranlucent {
     background: rgba(34, 34, 34, 0.8);
-  }
-
-  > .container {
-    @media screen and (min-width: 992px) {
-      position: relative;
-    }
   }
 
   .logo {
@@ -52,6 +47,7 @@
         background: rgba(34, 34, 34, 0.8);
         border: 0 none;
         padding: 0;
+        z-index: 9999;
       }
     }
 
@@ -66,6 +62,7 @@
 
         @media screen and (max-width: 991px) {
           float: none;
+          text-align: center;
         }
 
         &.active {
@@ -84,7 +81,7 @@
           padding: 25px 20px;
 
           @media screen and (max-width: 991px) {
-            display: block;
+            display: inline-block;
             text-align: center;
             padding-top: 15px;
             padding-bottom: 15px;
@@ -121,25 +118,32 @@
 
   .social {
     float: right;
-    margin: 20px 0;
+    
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+.social {
+  margin: 20px 0;
 
-      li {
-        float: left;
-        width: 30px;
-        height: 30px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-        img {
-          width: 100%;
-        }
+    li {
+      float: left;
+      width: 30px;
+      height: 30px;
 
-        & + li {
-          margin-left: 14px;
-        }
+      img {
+        width: 100%;
+      }
+
+      & + li {
+        margin-left: 14px;
       }
     }
   }

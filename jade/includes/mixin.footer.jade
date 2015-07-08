@@ -1,23 +1,24 @@
 mixin footer
   footer.footer(class!=attributes.class)
     .container
-      .col
+      .col.opening-hours
+        h4.title-footer Opening Hours
         p
-          | 서울 특별시 강남구 논현로 167길 12 (신사동) 
+          | 월요일 (Mon) - 금요일 (Fri)  9:00am - 10:00pm
           i.divider |
-          |  대표 권혁복
+          | 토요일 (Sat) 9:30am - 6:00pm
+          <br />
+          | Phone: 02)548-3453   Fax: 02)545-8877    
+      .col.info
+        h4.title-footer Info
         p
-          span Phone: 02)548-3453
-          span Fax: 02)545-887
-          span 사업등록: 214-95-03484
-      .col
-        p OPENING HOURS
-        p
-          | 월요일 (Mon) - 금요일 (Fri)  9:00am - 10:00pm 
+          | 서울 특별시 강남구 논현로 167길 12 (신사동)
           i.divider |
-          |  토요일 (Sat) 9:30am - 6:00pm
-      .col
-        p LANGUAGE
+          | 대표 권혁복
+          <br />
+          | 사업등록: 214-95-03484
+      .col.language
+        h4.title-footer Language
         p
           a(href='#') Korean
           i.divider /

@@ -5,4 +5,23 @@
   .slider-control-wrap, .slider-indicators {
     display: none !important;
   }
+
+  .caroufredsel-slider .caroufredsel_wrapper .sliders .slide-item {
+
+  	@media screen and (max-width: 991px) {
+  		background-size: cover;
+  		background-position: center center;
+  		height: 1400px !important;
+  	}
+
+		@media screen and (min-width: 992px) {
+			background-image: none !important;
+		}
+
+		.slide-image {
+			@media screen and (max-width: 991px) {
+				display: none !important;
+			}
+		}
+  }
 }
