@@ -2,18 +2,18 @@
   .container
     .row
       .col-xs-12
-        .artphil-h1 Accepted Student
+        .artphil-h1 Result
     .row.accepted-row2
-      .col-xs-9
+      .col-xs-12
         .accepted-des
-          |아트필은 수강생들의 개인정보를 보호하고자 약명을 기본으로 사용하고 있습니다. <br/>
-          |직접 아트필에 방문상담 하시면 합격생의 실명확인과 제출합격한 실제 포트폴리오를 직접 열람, 설명을 들으실 수 있습니다.
-      .col-xs-3
-        .accepted-search
-          form(id="", method="GET", action="#")
-            input.accepted-search-input(type="text", placeholder="Search")
+          | 합격을 축하 드립니다. 아트필은 현재까지 
+          br
+          | 총 70,450 명의 합격생 / 총 $312,423,000의 장학금을 받았습니다.
+    .row
+      .col-xs-12
+        .artphil-h1 List          
     .row.accepted-row3
-      .col-md-4
+      .col-xs-12.col-md-3.col-item
         .accepted-year
           .accepted-year-title Year <span class="sub">연도</span>
           .accepted-year-sep
@@ -21,17 +21,19 @@
             - for (var i = 15; i > 0; i--) {
                 li #[a(href="#") 20#{i} (전공별 / 학교별 / 장학생) ]
             - }
-      .col-md-8
+      .col-xs-12.col-md-9.col-item
         table.table.accepted-table
           thead
             tr
-              th 학교 / 장학금
+              th 학교
               th 이름 { 학생 ID }
               th 전공
+              th 장학금
           tbody
             - for (var i = 30; i > 0; i--) {
               tr
-                td Harvard U. (M.Arch) <span class="red">첫해 $7500 + 추가발표</span>
+                td Harvard U. (M.Arch)
                 td Anon-5162
                 td Architecture
+                td <span class="red">첫해 $7500 + 추가발표</span>
             - }

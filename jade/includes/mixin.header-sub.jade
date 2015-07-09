@@ -1,8 +1,8 @@
 mixin snb(...items)
   .snb#snb
     .container
-      a.navbar-toggle.collapsed(data-toggle='collapse', data-target='#nav-sub')
-        span About
+      .navbar-toggle-wrap
+        a.navbar-toggle.collapsed(data-toggle='collapse', data-target='#nav-sub') About
       #nav-sub.navbar-collapse.collapse(role='navigation')
         ul
           each item in items

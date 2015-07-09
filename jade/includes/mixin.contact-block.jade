@@ -1,9 +1,9 @@
 mixin contact-block(data)
   .contact-block
     .row
-      .col-xs-2
+      .col-xs-2.col-item
         img(src="#{data.icon}", alt="")
-      .col-xs-10.contact-block-chunk-wrapper
+      .col-xs-10.col-item.contact-block-chunk-wrapper
         .row
           if data.chunks.length == 1
             .col-xs-12
@@ -11,11 +11,11 @@ mixin contact-block(data)
                 .contact-block-chunk-title!=data.chunks[0].title    
                 .contact-block-chunk-des!=data.chunks[0].des 
           else
-            .col-xs-6
+            .col-xs-6.col-6
               .contact-block-chunk
                 .contact-block-chunk-title!=data.chunks[0].title    
                 .contact-block-chunk-des!=data.chunks[0].des 
-            .col-xs-6
+            .col-xs-6.col-6
               .contact-block-chunk.fax
                 .contact-block-chunk-title!=data.chunks[1].title    
                 .contact-block-chunk-des!=data.chunks[1].des

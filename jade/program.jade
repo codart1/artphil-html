@@ -5,17 +5,17 @@ block contents
 	+header(class="lightlime-color")
 
 	include includes/mixin.header-sub.jade
-	+snb('Regular Course', 'Intensive Course', 'Special Courses', 'Collaborative Project', 'Figure Drawing Class')
+	+snb('Regular Course', 'Intensive Course', 'Figure Drawing Class', 'Special Courses', 'Collaborative Project')
 
 	include includes/regular-course.jade
 
 	include includes/intensive-course.jade
 
+	include includes/figure-drawing-class.jade
+	
 	include includes/special-courses.jade
 
 	include includes/collaborative-project.jade
-	
-	include includes/figure-drawing-class.jade
 	
 	include includes/mixin.footer.jade
 	+footer(class="static")

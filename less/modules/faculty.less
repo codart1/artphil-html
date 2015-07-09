@@ -26,8 +26,24 @@
 			margin-bottom: 40px;
 		}
 
-		&.active,
 		&:hover {
+			.content-thumb img {
+				@media screen and (min-width: 992px) {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+
+			.content-hover {
+				@media screen and (min-width: 992px) {
+					opacity: 1;
+					visibility: visible;
+					background-color: #D5D5D5;
+				}
+			}
+		}
+
+		&.active {
 			.content-thumb img {
 				opacity: 0;
 				visibility: hidden;

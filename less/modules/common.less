@@ -123,7 +123,6 @@ input, select, textarea, button, .btn {
   }
 }
   
-
 .misc-fs18 {
   font-size: 18px;
 }
@@ -137,6 +136,8 @@ input, select, textarea, button, .btn {
 }
 
 .program-table {
+  margin-bottom: 25px;
+
   table {
     width: 100%;
 
@@ -150,36 +151,58 @@ input, select, textarea, button, .btn {
     td {
       font-family: 'Georgia-Italic';
       font-size: 18px;
-      color: #555;
+      color: #636363;
       font-style: italic;
       padding: 12px 20px;
 
+      @media screen and (max-width: 991px) {
+        font-size: 17px;
+      }
+
       &:nth-child(2) {
+        width: 142px;
+        font-family: 'NanumGothic';
         text-align: center;
-        font-size: 16px;
+        font-size: 18px;
+        font-style: normal;
         padding-left: 0;
         padding-right: 0;
+
+        @media screen and (max-width: 991px) {
+          width: 133px;
+          font-size: 17px;
+        }
       }
     }
 
     caption {
-      font-family: 'NanumGothic';
+      font-family: 'Georgia-Italic';
       font-size: 21px;
       font-weight: bold;
       font-style: italic;
       color: #000;
       padding-top: 0;
       padding-bottom: 14px;
+
+      span {
+        font-family: 'NanumGothic';
+        font-weight: normal;
+      }
     }
 
-    .highlight {
+    .overview {
       font-family: 'Georgia-Italic';
-      font-size: 21px;
-      background-color: @lightlime-color;
-      border-color: @lightlime-color;
+      font-size: 20px;
+      background-color: @black-color;
+      border-color: @black-color;
       color: #fff;
-      font-style: italic;
+      font-weight: bold;
+      font-style: normal;
       text-align: center;
+
+      @media screen and (max-width: 991px) {
+        font-size: 19px;
+      }
     }
 
     .border-bottom-none {
@@ -205,31 +228,40 @@ input, select, textarea, button, .btn {
     &,
     p {
       font-family: 'NanumGothic';
-      color: #959595;
+      color: #636363;
     }
-  }
-
-  .red-color {
-    color: #ff0000 !important;
-    font-weight: bold;
   }
 }
 
 .program-slider {
   margin-bottom: 30px;
 
-  .slider-indicators {
-    display: none !important;
-  }
-}
+  .caroufredsel-slider {
+    .caroufredsel_wrapper .sliders .slide-item .slide-image {
+      max-height: 320px;
 
-.main-content {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 70px;
-  }
+      @media screen and (max-width: 991px) {
+        min-height: 150px;
+      }
+    }
+
+    .slider-control img {
+      @media screen and (max-width: 991px) {
+        width: 65%;
+      }
+    }
+
+    .slider-indicators {
+      display: none !important;
+    }
+  }   
 }
 
 .sidebar {
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+
   aside {
     position: relative;
     padding-top: 38px;

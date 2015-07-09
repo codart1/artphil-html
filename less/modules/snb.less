@@ -44,6 +44,11 @@
 				display: inline-block;
 				font-family: 'NanumGothic';
 
+				@media screen and (max-width: 991px) {
+					display: block;
+					padding: 5px 0;
+				}
+
 				&.active {
 					a {
 						border-bottom: 2px solid #636363;
@@ -59,6 +64,10 @@
 
 			.snb-item + .snb-item {
 				margin-left: 48px;
+
+				@media screen and (max-width: 991px) {
+					margin-left: 0;
+				}
 			}
 		}
 	}
@@ -76,31 +85,34 @@
 	  }
 	}
 
+	.navbar-toggle-wrap {
+		text-align: center;
+		border-bottom: 1px solid #ccc;
+
+		@media screen and (min-width: 992px) {
+			display: none;
+		}
+	}
+
 	.navbar-toggle {
+		display: none;
 		float: none;
 		cursor: pointer;
 		text-align: center;
 		color: #000;
+		line-height: 1;
 		border: 0 none;
-		border-bottom: 1px solid #ccc;
+		background: url("../images/icon/angle-up.png") center right no-repeat;
 	  border-radius: 0;
+		padding-right: 20px;
 		margin: 0;
 
 		@media screen and (max-width: 991px) {
-			display: block;
+			display: inline-block;
 		}
 
 		&.collapsed {
-			span {
-				background: url("../images/icon/angle-down.png") center right no-repeat;
-			}
-		}
-
-		span {
-			display: inline-block;
-			background: url("../images/icon/angle-up.png") center right no-repeat;
-			padding-right: 20px;
-			line-height: 1;
+			background: url("../images/icon/angle-down.png") center right no-repeat;
 		}
 	}
 }
