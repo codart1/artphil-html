@@ -48,9 +48,13 @@
 
         var sliderMain = $("#caroufredsel-slider-main");
         var slideItem = sliderMain.find(".sliders .slide-item");
-        var slideImage = slideItem.find(".slide-image");
-        var urlSlideImage = slideImage.attr('src');
-        slideItem.css("background-image", "url('" + urlSlideImage + "')");
+
+        slideItem.each(function(){
+          var _slideItem = $(this);
+          var slideImage = _slideItem.find(".slide-image");
+          var urlSlideImage = slideImage.attr('src');
+          _slideItem.css("background-image", "url('" + urlSlideImage + "')");
+        });
       }
     })();
 

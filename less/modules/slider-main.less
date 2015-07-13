@@ -7,21 +7,20 @@
   }
 
   .caroufredsel-slider .caroufredsel_wrapper .sliders .slide-item {
+    background-repeat: no-repeat;
+    background-position: center center;
+		background-size: cover;
 
-  	@media screen and (max-width: 991px) {
-  		background-size: cover;
-  		background-position: center center;
+    @media screen and (max-width: 991px) {
   		height: 1400px !important;
   	}
 
 		@media screen and (min-width: 992px) {
-			background-image: none !important;
+      height: 1000px !important;
 		}
 
 		.slide-image {
-			@media screen and (max-width: 991px) {
-				display: none !important;
-			}
+			display: none !important;
 		}
   }
 }
