@@ -351,5 +351,24 @@
       }
     })();
 
+
+
+    /* --------------------------------------------------------------------- */
+    /* .faculty
+    /* --------------------------------------------------------------------- */
+    (function() {
+      if ($('.why-artphil').length) {
+        var whyArtphil = $(".why-artphil");
+        var whyArtphilContentThumb = whyArtphil.find(".content-thumb");
+
+        whyArtphilContentThumb.each(function(){
+          var _whyArtphilContentThumb = $(this);
+          var featuredImage = _whyArtphilContentThumb.find("img");
+          var urlFeaturedImage = featuredImage.attr('src');
+          _whyArtphilContentThumb.css("background-image", "url('" + urlFeaturedImage + "')");
+        });
+      }
+    })();
+
   });
 }(jQuery);
