@@ -158,7 +158,7 @@
           }
 
           var menuItemsActive = snb.find("#nav-sub ul li.active a");
-          var navbarToggle = snb.find(".navbar-toggle span");
+          var navbarToggle = snb.find(".navbar-toggle");
           navbarToggle.html(menuItemsActive.text());
 
           if(!menuItems.parent().hasClass("active")){
