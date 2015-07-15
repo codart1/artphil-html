@@ -94,7 +94,7 @@
         }
       };
 
-      $(document).ready(function(){
+      $(window).load(function(){
         equaHeight($(".faculty"), $(".col-item"));
         equaHeight($(".why-artphil"), $(".col-item"));
       });
